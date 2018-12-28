@@ -9,9 +9,6 @@
   tagline = ""
 }
 
-% 20 would be the default size.
-#(set-global-staff-size 19)
-
 global = {
   \key c \major
   \time 4/4
@@ -20,6 +17,9 @@ global = {
   % a lot more readable.
   \override Lyrics.LyricSpace.minimum-distance = #2.0
 }
+
+% 20 would be the default size.
+#(set-global-staff-size 19)
 
 
 sopranoMusic = \relative c'' {
