@@ -13,7 +13,7 @@
 #(set-global-staff-size 19)
 
 global = {
-  \key a \minor
+  \key c \major
   \time 4/4
   \tempo 4 = 112
   % 1.0 would be the default value, but bigger values tend to make the lyrics
