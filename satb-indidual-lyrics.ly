@@ -23,7 +23,7 @@ global = {
 
 
 sopranoMusic = \relative c'' {
-  \repeat volta 2 {
+  \repeat volta 3 {
     c2 d4 e | e4. f8 e4 d | c2. b4 | c1 |
   }
 }
@@ -38,9 +38,14 @@ sopranoWordsII = \lyricmode {
   I sing the so -- pra -- no, oh yeah, oh yeah.
 }
 
+sopranoWordsIII = \lyricmode {
+  \set stanza = #"3. "
+  I sing the so -- pra -- no, oh yeah, yeah, yeah.
+}
+
 
 altoMusic = \relative c'' {
-  \repeat volta 2 {
+  \repeat volta 3 {
     g2 b4 b | c4. c8 c4 b | a2. f4 | g1 |
   }
 }
@@ -55,9 +60,14 @@ altoWordsII = \lyricmode {
   I sing the al -- to voice, oh yeah, oh yeah.
 }
 
+altoWordsIII = \lyricmode {
+  \set stanza = #"3. "
+  I sing the al -- to voice, oh yeah, yeah, yeah.
+}
+
 
 tenorMusic = \relative c {
-  \repeat volta 2 {
+  \repeat volta 3 {
     e2 g4 gs | a4. a8 a4 gs | e2. d4 | e1 |
   }
 }
@@ -72,9 +82,14 @@ tenorWordsII = \lyricmode {
   I sing the ten -- or voice, oh yeah, oh yeah.
 }
 
+tenorWordsIII = \lyricmode {
+  \set stanza = #"3. "
+  I sing the ten -- or voice, oh yeah, yeah, yeah.
+}
+
 
 bassMusic = \relative c {
-  \repeat volta 2 {
+  \repeat volta 3 {
     c2 b4 b | a4. a8 a4 b | a2. g8( b) | c1 |
   }
 }
@@ -89,6 +104,11 @@ bassWordsII = \lyricmode {
   Deep I sing, as I am the bass, oh yeah.
 }
 
+bassWordsIII = \lyricmode {
+  \set stanza = #"3. "
+  Deep I sing, as I am the bass, yeah, yeah.
+}
+
 
 sopranosStaff = {
   \new Staff = "sopranos" \with {instrumentName = #"S" midiInstrument = #"voice oohs"} <<
@@ -101,10 +121,13 @@ sopranosStaff = {
 sopranosLyrics = {
   \context Lyrics = "sopranos" \lyricsto "sopranos" <<
     { \sopranoWordsI }
-    \new Lyrics
-    \with { alignBelowContext = #"sopranos" } {
+    \new Lyrics = "sopranosII" \with { alignBelowContext = #"sopranos" } {
       \set associatedVoice = "sopranos"
       \sopranoWordsII
+    }
+    \new Lyrics \with { alignBelowContext = #"sopranosII" } {
+      \set associatedVoice = "sopranos"
+      \sopranoWordsIII
     }
   >>
 }
@@ -120,10 +143,13 @@ altosStaff = {
 altosLyrics = {
   \context Lyrics = "altos" \lyricsto "altos" <<
     { \altoWordsI }
-    \new Lyrics
-    \with { alignBelowContext = #"altos" } {
+    \new Lyrics = "altosII" \with { alignBelowContext = #"altos" } {
       \set associatedVoice = "altos"
       \altoWordsII
+    }
+    \new Lyrics \with { alignBelowContext = #"altosII" } {
+      \set associatedVoice = "altos"
+      \altoWordsIII
     }
   >>
 }
@@ -139,10 +165,13 @@ tenorsStaff = {
 tenorsLyrics = {
   \context Lyrics = "tenors" \lyricsto "tenors" <<
     { \tenorWordsI }
-    \new Lyrics
-    \with { alignBelowContext = #"tenors" } {
+    \new Lyrics = "tenorsII" \with { alignBelowContext = #"tenors" } {
       \set associatedVoice = "tenors"
       \tenorWordsII
+    }
+    \new Lyrics \with { alignBelowContext = #"tenorsII" } {
+      \set associatedVoice = "tenors"
+      \tenorWordsIII
     }
   >>
 }
@@ -158,10 +187,13 @@ bassesStaff = {
 bassesLyrics = {
   \context Lyrics = "basses" \lyricsto "basses" <<
     { \bassWordsI }
-    \new Lyrics
-    \with { alignBelowContext = #"basses" } {
+    \new Lyrics = "bassesII" \with { alignBelowContext = #"basses" } {
       \set associatedVoice = "basses"
       \bassWordsII
+    }
+    \new Lyrics \with { alignBelowContext = #"bassesII" } {
+      \set associatedVoice = "basses"
+      \bassWordsIII
     }
   >>
 }
