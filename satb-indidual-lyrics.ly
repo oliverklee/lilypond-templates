@@ -28,12 +28,12 @@ sopranoMusic = \relative c'' {
   }
 }
 
-sopranoWordsOne = \lyricmode {
+sopranoWordsI = \lyricmode {
   \set stanza = #"1. "
   I am the so -- pra -- no, oh yeah, oh yeah.
 }
 
-sopranoWordsTwo = \lyricmode {
+sopranoWordsII = \lyricmode {
   \set stanza = #"2. "
   I sing the so -- pra -- no, oh yeah, oh yeah.
 }
@@ -45,12 +45,12 @@ altoMusic = \relative c'' {
   }
 }
 
-altoWordsOne = \lyricmode {
+altoWordsI = \lyricmode {
   \set stanza = #"1. "
   I am an al -- to voice, oh yeah, oh yeah.
 }
 
-altoWordsTwo = \lyricmode {
+altoWordsII = \lyricmode {
   \set stanza = #"2. "
   I sing the al -- to voice, oh yeah, oh yeah.
 }
@@ -62,12 +62,12 @@ tenorMusic = \relative c {
   }
 }
 
-tenorWordsOne = \lyricmode {
+tenorWordsI = \lyricmode {
   \set stanza = #"1. "
   I am the ten -- or voice, oh yeah, oh yeah.
 }
 
-tenorWordsTwo = \lyricmode {
+tenorWordsII = \lyricmode {
   \set stanza = #"2. "
   I sing the ten -- or voice, oh yeah, oh yeah.
 }
@@ -79,12 +79,12 @@ bassMusic = \relative c {
   }
 }
 
-bassWordsOne = \lyricmode {
+bassWordsI = \lyricmode {
   \set stanza = #"1. "
   Deep I sing, as I am the bass, oh yeah.
 }
 
-bassWordsTwo = \lyricmode {
+bassWordsII = \lyricmode {
   \set stanza = #"2. "
   Deep I sing, as I am the bass, oh yeah.
 }
@@ -100,11 +100,11 @@ sopranosStaff = {
 }
 sopranosLyrics = {
   \context Lyrics = "sopranos" \lyricsto "sopranos" <<
-    { \sopranoWordsOne }
+    { \sopranoWordsI }
     \new Lyrics
     \with { alignBelowContext = #"sopranos" } {
       \set associatedVoice = "sopranos"
-      \sopranoWordsTwo
+      \sopranoWordsII
     }
   >>
 }
@@ -119,11 +119,11 @@ altosStaff = {
 }
 altosLyrics = {
   \context Lyrics = "altos" \lyricsto "altos" <<
-    { \altoWordsOne }
+    { \altoWordsI }
     \new Lyrics
     \with { alignBelowContext = #"altos" } {
       \set associatedVoice = "altos"
-      \altoWordsTwo
+      \altoWordsII
     }
   >>
 }
@@ -138,11 +138,11 @@ tenorsStaff = {
 }
 tenorsLyrics = {
   \context Lyrics = "tenors" \lyricsto "tenors" <<
-    { \tenorWordsOne }
+    { \tenorWordsI }
     \new Lyrics
     \with { alignBelowContext = #"tenors" } {
       \set associatedVoice = "tenors"
-      \tenorWordsTwo
+      \tenorWordsII
     }
   >>
 }
@@ -157,11 +157,11 @@ bassesStaff = {
 }
 bassesLyrics = {
   \context Lyrics = "basses" \lyricsto "basses" <<
-    { \bassWordsOne }
+    { \bassWordsI }
     \new Lyrics
     \with { alignBelowContext = #"basses" } {
       \set associatedVoice = "basses"
-      \bassWordsTwo
+      \bassWordsII
     }
   >>
 }
