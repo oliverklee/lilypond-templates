@@ -27,13 +27,30 @@ dsac = \mark \markup { \smaller "D.S. al Coda" \musicglyph #"scripts.segno"  }
 toco = \mark \markup { \smaller "To Coda" \musicglyph #"scripts.coda" }
 
 % http://lsr.di.unimi.it/LSR/Item?id=265
-leftbrace = \set stanza = \markup {
+leftbraceForUnevenLyricLines = \set stanza = \markup {
   \hspace #1
   \translate #'(0 . 0.8) \left-brace #45
 }
-rightbrace = \set stanza = \markup {
+rightbraceForUnevenLyricLines = \set stanza = \markup {
   \hspace #1
   \translate #'(0 . 0.8) \right-brace #45
+}
+
+dropLyrics = {
+  \override LyricText.extra-offset = #'(0 . -1)
+  \override LyricHyphen.extra-offset = #'(0 . -1)
+  \override LyricExtender.extra-offset = #'(0 . -1)
+  \override StanzaNumber.extra-offset = #'(0 . -1)
+}
+
+leftbraceForEvenLyricLines = \set stanza = \markup {
+  \hspace #1
+  \translate #'(0 . -0.6) \left-brace #25
+}
+
+rightbraceForEvenLyricLines = \set stanza = \markup {
+  \hspace #1
+  \translate #'(0 . 0.4) \right-brace #25
 }
 
 showChordOnce = {
