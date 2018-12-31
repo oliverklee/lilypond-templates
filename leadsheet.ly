@@ -36,6 +36,11 @@ rightbrace = \set stanza = \markup {
   \translate #'(0 . 0.8) \right-brace #45
 }
 
+showChordOnce = {
+  \once \set chordChanges = ##f
+}
+
+
 % Intro
 
 introHarmonies = \chordmode {
@@ -121,16 +126,18 @@ harmonies = {
     \introHarmonies
 
     \mark \markup{ \box "Verse" }
-    \once \set chordChanges = ##f
+    \showChordOnce
     \repeat volta 2 {
       \verseHarmonies
 
       \mark \markup{ \box "Chorus" }
-      \set chordChanges = ##f
+      \showChordOnce
       \chorusHarmonies
     }
     \mark \markup{ \box "Guitar solo" }
+    \showChordOnce
     \soloHarmonies
+    \showChordOnce
     \coda
     \repeat volta 2 {
       \outroHarmonies
