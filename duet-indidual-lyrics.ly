@@ -28,6 +28,9 @@ verseHarmonies = \chordmode {
 
 harmonies = {
   \new ChordNames {
+    \set majorSevenSymbol = \markup { maj7 }
+    \powerChords
+
     \set chordChanges = ##t
     \repeat volta 2 {
       \verseHarmonies

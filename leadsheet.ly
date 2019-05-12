@@ -61,7 +61,6 @@ showChordOnce = {
 % Intro
 
 introHarmonies = \chordmode {
-  \powerChords
   c1:1.5 | a:1.5 | f:1.5 | g:1.5 | \break
 }
 
@@ -138,6 +137,9 @@ outroRests = {
 
 harmonies = {
   \new ChordNames {
+    \set majorSevenSymbol = \markup { maj7 }
+    \powerChords
+
     \set chordChanges = ##t
     \segno
     \introHarmonies
