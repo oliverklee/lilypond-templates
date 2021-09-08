@@ -154,7 +154,7 @@ duet = {
         \duet
       }
     >>
-    \midi {}
+    % \midi {}
   }
 }
 
@@ -165,7 +165,7 @@ duet = {
     \unfoldRepeats {
       \sopranosStaff
     }
-    \midi {}
+    % \midi {}
   }
 }
 
@@ -176,6 +176,6 @@ duet = {
     \unfoldRepeats {
       \tenorsStaff
     }
-    \midi {}
+    % \midi {}
   }
 }

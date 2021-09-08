@@ -195,5 +195,5 @@ music = {
 
   \layout {}
   % The MIDI output is for "proofhearing" only. Hence, the repeats are not unfolded.
-  \midi {}
+  % \midi {}
 }
