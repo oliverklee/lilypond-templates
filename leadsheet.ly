@@ -139,7 +139,6 @@ harmonies = {
   \new ChordNames {
     \set majorSevenSymbol = \markup { maj7 }
     \set additionalPitchPrefix = #"add"
-    \powerChords
 
     \set chordChanges = ##t
     \segno
